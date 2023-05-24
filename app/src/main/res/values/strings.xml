@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name" translatable="false">asm1</string>
+    <string name="txt1_begin" translatable="false">FPOLY SOFTWERE COMPANY</string>
+    <string name="txt2_begin" translatable="false">Faculty of information technology</string>
+    <string name="txt3_begin" translatable="false">CONNECT</string>
+    <string name="txt4_begin" translatable="false"> the </string>
+    <string name="txt5_begin" translatable="false">FUTURE</string>
+    <string name="title1_login" translatable="false">Mời nhập User</string>
+    <string name="content1" translatable="false">Mời nhập User</string>
+    <string name="textbanner_login" translatable="false">Chào mừng trở lại</string>
+    <string name="textbanner2_login" translatable="false">Vui lòng đăng nhập để tiếp tục</string>
+    <string name="title2_login" translatable="false">Mời nhập Password</string>
+    <string name="content2" translatable="false">Mời nhập Password</string>
+    <string name="ckb_save" translatable="false">Ghi nhớ tài khoản</string>
+    <string name="textbanner_sign" translatable="false">Chào mừng bạn</string>
+    <string name="textbanner2_sign" translatable="false">Đăng ký tài khoản</string>
+    <string name="content3" translatable="false">Mời nhập lại password</string>
+    <string name="login" translatable="false">Đăng nhập</string>
+    <string name="back" translatable="false">Trở về</string>
+    <string name="QLNS" translatable="false">QUẢN LÝ NHÂN SỰ</string>
+    <string name="PB_btn" translatable="false">Phòng ban</string>
+    <string name="NV_btn" translatable="false">Nhân viên</string>
+    <string name="title3" translatable="false">Phòng ban</string>
+    <string name="Exit_btn" translatable="false">Thoát</string>
+    <string name="title5" translatable="false">Nhân viên</string>
+</resources>

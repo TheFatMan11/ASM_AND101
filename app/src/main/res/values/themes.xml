@@ -1,0 +1,10 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Asm1" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorControlNormal">#000000</item>
+        <item name="colorControlActivated">#FF9800</item>
+        <item name="colorControlHighlight">#d94ed0</item>
+    </style>
+
+    <style name="Theme.Asm1" parent="Base.Theme.Asm1" />
+</resources>
