@@ -95,6 +95,7 @@
             />
     </LinearLayout>
     <CheckBox
+        android:id="@+id/cbk_luu"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/ckb_save"

@@ -25,11 +25,11 @@
         android:layout_height="wrap_content"
         android:hint="Nhập MSNV" />
 
-    <EditText
+    <Spinner
         android:id="@+id/et_vp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Nhập Văn Phòng" />
+        />
 
     <Button
         android:id="@+id/btn_luu"

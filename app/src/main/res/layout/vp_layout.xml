@@ -5,10 +5,10 @@
     android:orientation="vertical"
     android:layout_height="match_parent">
     <include layout="@layout/toolbar"
-        android:id="@+id/tb_toolbar"
+        android:id="@+id/tb_toolbar2"
         />
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/bnt_ns"
+        android:id="@+id/btn_ns1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:drawableLeft="@drawable/baseline_maps_home_work_24"
@@ -19,7 +19,7 @@
         android:background="@drawable/custom_btn"
         />
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/bnt_hc"
+        android:id="@+id/btn_hc2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:drawableLeft="@drawable/baseline_maps_home_work_24"
@@ -30,7 +30,7 @@
         android:background="@drawable/custom_btn"
         />
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/bnt_dt"
+        android:id="@+id/btn_dt3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:drawableLeft="@drawable/baseline_maps_home_work_24"

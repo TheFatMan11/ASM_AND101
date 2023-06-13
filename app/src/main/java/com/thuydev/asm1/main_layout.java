@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 public class main_layout extends AppCompatActivity {
 
@@ -16,6 +17,7 @@ public class main_layout extends AppCompatActivity {
         Button pb = findViewById(R.id.btn_pb);
         Button nv = findViewById(R.id.btn_nv);
         Button exit = findViewById(R.id.btn_exit);
+
         exit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
