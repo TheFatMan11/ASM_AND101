@@ -33,6 +33,14 @@
             android:exported="true">
 
         </activity>
+        <activity android:name=".PhongBan"
+            android:exported="true">
+
+        </activity>
+        <activity android:name=".NhanVien"
+            android:exported="true">
+
+        </activity>
     </application>
 
 </manifest>
