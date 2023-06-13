@@ -28,6 +28,8 @@ import java.util.ArrayList;
 public class NhanVien extends AppCompatActivity {
     ArrayList<Nhanvien_modle> list = new ArrayList<>();
     AdpterNV adpterNV ;
+    Nhanvien_modle nhanvien_modle;
+    int changeData = 0;
     public static final String KEY_DATA = "data";
 
     ActivityResultLauncher getData = registerForActivityResult(
@@ -59,11 +61,26 @@ public class NhanVien extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(NhanVien.this,ADD_NV.class);
+                intent.putExtra("text","Thêm nhân viên");
+                setResult(2,intent);
                 getData.launch(intent);
             }
         });
     }
-
+ActivityResultLauncher UpdateData = registerForActivityResult(
+        new ActivityResultContracts.StartActivityForResult(),
+        new ActivityResultCallback<ActivityResult>() {
+            @Override
+            public void onActivityResult(ActivityResult result) {
+                if (result.getResultCode()==1){
+                    Intent intent =result.getData();
+                    nhanvien_modle = (Nhanvien_modle) intent.getSerializableExtra(KEY_DATA);
+                    list.set(changeData,nhanvien_modle);
+                    adpterNV.notifyDataSetChanged();
+                }
+            }
+        }
+);
     public class AdpterNV extends BaseAdapter {
         Activity activity;
         ArrayList<Nhanvien_modle> list = new ArrayList<>();
@@ -98,7 +115,7 @@ public class NhanVien extends AppCompatActivity {
             ImageButton xoa = convertView.findViewById(R.id.btn_xoa);
             ImageButton Update = convertView.findViewById(R.id.btn_edit);
 
-            Nhanvien_modle nhanvien_modle = list.get(position);
+           nhanvien_modle = list.get(position);
 
             ID.setText(nhanvien_modle.getID());
             Name.setText(nhanvien_modle.getHoTen());
@@ -116,6 +133,13 @@ public class NhanVien extends AppCompatActivity {
             Update.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    changeData=position;
+
+                    Intent intent = new Intent(NhanVien.this,ADD_NV.class);
+                    intent.putExtra("text","Sửa nhân viên");
+                    intent.putExtra("list",nhanvien_modle);
+                    setResult(2,intent);
+                    UpdateData.launch(intent);
 
                 }
             });

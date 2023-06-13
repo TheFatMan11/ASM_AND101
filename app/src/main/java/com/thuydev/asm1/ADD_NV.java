@@ -6,6 +6,7 @@ import android.os.PersistableBundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -19,6 +20,16 @@ public class ADD_NV extends AppCompatActivity {
         EditText ma = findViewById(R.id.et_ma);
         EditText vp = findViewById(R.id.et_vp);
         Button them = findViewById(R.id.btn_luu);
+        TextView tille = findViewById(R.id.title);
+
+        Intent intent = getIntent();
+        tille.setText(""+intent.getStringExtra("text"));
+        Nhanvien_modle  nv = (Nhanvien_modle) getIntent().getSerializableExtra("list");
+        if(nv!=null){
+            ten.setText(nv.getHoTen());
+            ma.setText(nv.getID());
+            vp.setText(nv.getPhongban());
+        }
 
         them.setOnClickListener(new View.OnClickListener() {
             @Override
