@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name" translatable="false">asm1</string>
     <string name="txt1_begin" translatable="false">FPOLY SOFTWERE COMPANY</string>
     <string name="txt2_begin" translatable="false">Faculty of information technology</string>
@@ -23,4 +23,11 @@
     <string name="title3" translatable="false">Phòng ban</string>
     <string name="Exit_btn" translatable="false">Thoát</string>
     <string name="title5" translatable="false">Nhân viên</string>
+    <string name="tv_id" tools:ignore="MissingTranslation">Mã nhân viên: </string>
+    <string name="tv_name" tools:ignore="MissingTranslation">Họ tên: </string>
+    <string name="tv_vp_nv" tools:ignore="MissingTranslation">Văn phòng: </string>
+    <string name="btn_title_add" tools:ignore="MissingTranslation">Thêm phòng nhân viên mới</string>
+    <string name="tv_ns" tools:ignore="MissingTranslation">Nhân sự</string>
+    <string name="tv_hc" tools:ignore="MissingTranslation">Hành chính</string>
+    <string name="tv_dt" tools:ignore="MissingTranslation">Đào tạo</string>
 </resources>
