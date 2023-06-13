@@ -1,17 +1,23 @@
 package com.thuydev.asm1;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.activity.result.ActivityResult;
+import androidx.activity.result.ActivityResultCallback;
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -22,15 +28,40 @@ import java.util.ArrayList;
 public class NhanVien extends AppCompatActivity {
     ArrayList<Nhanvien_modle> list = new ArrayList<>();
     AdpterNV adpterNV ;
+    public static final String KEY_DATA = "data";
+
+    ActivityResultLauncher getData = registerForActivityResult(
+            new ActivityResultContracts.StartActivityForResult(),
+            new ActivityResultCallback<ActivityResult>() {
+                @Override
+                public void onActivityResult(ActivityResult result) {
+                    if(result.getResultCode()==1){
+                        Intent intent = result.getData();
+                        Nhanvien_modle nhanVien = (Nhanvien_modle) intent.getSerializableExtra(KEY_DATA);
+                        list.add(nhanVien);
+                        adpterNV.notifyDataSetChanged();
+                    }
+                }
+            }
+    );
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.nv_layout);
         ListView lv_nv = findViewById(R.id.lv_list_nv);
+        Button them = findViewById(R.id._add);
         list.add(new Nhanvien_modle("mmm","thuy","maketing"));
         adpterNV = new AdpterNV(this,list);
         lv_nv.setAdapter(adpterNV);
+
+        them.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(NhanVien.this,ADD_NV.class);
+                getData.launch(intent);
+            }
+        });
     }
 
     public class AdpterNV extends BaseAdapter {
