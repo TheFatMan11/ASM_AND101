@@ -1,45 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:orientation="vertical"
     android:layout_height="match_parent">
-
-    <LinearLayout
+    <include layout="@layout/toolbar"
+        android:id="@+id/tb_toolbar"
+        />
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/bnt_ns"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:ignore="MissingConstraints"
-        android:background="#673AB7"
-       android:weightSum="10"
-        android:padding="10dp"
-        >
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="#673AB7"
-            android:layout_weight="1"
-            android:layout_gravity="center"
-            android:src="@drawable/baseline_arrow_back_24"
-            />
+        android:drawableLeft="@drawable/baseline_maps_home_work_24"
+        android:text="@string/tv_ns"
+        android:gravity="start|center"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:background="@drawable/custom_btn"
+        />
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/bnt_hc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/baseline_maps_home_work_24"
+        android:text="@string/tv_hc"
+        android:gravity="start|center"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:background="@drawable/custom_btn"
+        />
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/bnt_dt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/baseline_maps_home_work_24"
+        android:text="@string/tv_dt"
+        android:gravity="start|center"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:background="@drawable/custom_btn"
+        />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/title3"
-            android:textSize="20dp"
-            android:textStyle="bold"
-            android:layout_gravity="center"
-            android:layout_weight="8"
-            android:textColor="@color/white"
-            />
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="#673AB7"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:src="@drawable/baseline_search_24"
-            />
 
-    </LinearLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
